@@ -16,16 +16,15 @@ export default function Register() {
 
   const history = useHistory()
 
-  async function handleRegister(e) {
+  function handleRegister(e) {
     e.preventDefault()
 
-    try {
-      const resp = await api.post('ongs', {name,email,whatsapp,city,state})
-      alert(`Seu ID de acesso é: ${resp.data.id}`)
-      history.push('/')
-    } catch(e) {
-      alert('Ocorreu algum erro')
-    }
+    api.post('ongs', {name,email,whatsapp,city,state})
+      .then(resp => {
+        alert(`Seu ID de acesso é: ${resp.data.id}`)
+        history.push('/')
+      })
+      .catch((e) => console.log(e))
   }
 
 
