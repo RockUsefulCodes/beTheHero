@@ -27,6 +27,21 @@ module.exports = {
     return resp.json({ id })
   },
 
+  async update(req, resp) {
+    const ongId = req.headers.authorization
+    const {id} = req.params
+    const {title, description, value} = req.body
+
+
+    const result = await db('incidents')
+      .where({'id': id, 'ong_id': ongId})
+      .update({title,description,value})
+
+    return (result > 0) ? 
+      resp.status(204).send() : 
+      resp.status(401).json({ error: 'Operation not permitted' })
+  },
+
   async delete(req, resp) {
     const { id } = req.params
     const ong_id = req.headers.authorization

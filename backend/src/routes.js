@@ -7,7 +7,7 @@ const { celebrate, Joi, Segments} = require('celebrate')
 
 const routes = express.Router()
 
-routes.post('/ongs', celebrate({
+const ongValidation = celebrate({
   [Segments.BODY]: Joi.object().keys({
     name: Joi.string().required(),
     email: Joi.string().required().email(),
@@ -16,20 +16,29 @@ routes.post('/ongs', celebrate({
     state: Joi.string().required().length(2),
 
   })
-}), ongService.create)
-routes.get('/ongs', ongService.index)
+})
 
-routes.post('/incidents', celebrate({
+const authorizationValidation = celebrate({
   [Segments.HEADERS]: Joi.object({
     authorization: Joi.string().required()
   }).unknown()
-}), celebrate({
+})
+
+const incidentsValidation = celebrate({
   [Segments.BODY]: Joi.object().keys({
     title: Joi.string().required(),
     description: Joi.string().required(),
     value: Joi.number().required()
   })
-}), incidentService.create)
+})
+
+routes.post('/ongs', ongValidation, ongService.create)
+routes.put('/ongs/:id', ongValidation, ongService.update)
+routes.get('/ongs', ongService.index)
+routes.get('/ongs/:id', ongService.detail)
+
+routes.post('/incidents', authorizationValidation, incidentsValidation, incidentService.create)
+routes.put('/incidents/:id', authorizationValidation, incidentsValidation, incidentService.update)
 
 routes.get('/incidents', celebrate({
   [Segments.QUERY]: Joi.object().keys({
