@@ -14,7 +14,7 @@ Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o m
 * SQLite
 * Express
 
-# Instalação
+# Instalações
 
 ## Instalação da API
 ```bash
@@ -54,4 +54,4 @@ npm start
 - Faça um push para a sua branch: `git push origin my-feature`.
 
 ---
-Criado por Wesley Luiz Zeferino [Entre em contato!](www.linkedin.com/in/wesleyluiz)
+Criado por Wesley Luiz Zeferino [Entre em contato pelo Linkedin!](https://www.linkedin.com/in/wesleyluiz)
