@@ -20,7 +20,7 @@ Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o m
 ## Instalação da API
 ```bash
 # Clonar o repositório
-$ git clone https://github.com/WesleyZeferino/beTheHero.git
+git clone https://github.com/WesleyZeferino/beTheHero.git
 
 # Acessar o diretório
 cd backend
