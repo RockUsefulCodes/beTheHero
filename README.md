@@ -13,6 +13,7 @@ Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o m
 * Axios
 * SQLite
 * Express
+* Expo
 
 # Instalações
 
@@ -21,7 +22,7 @@ Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o m
 # Clonar o repositório
 $ git clone https://github.com/WesleyZeferino/beTheHero.git
 
-# Acessos o diretório
+# Acessar o diretório
 cd backend
 
 # Instalar as dependências
@@ -36,7 +37,7 @@ npm start
 
 ## Instalação do FrontEnd
 ```bash
-# Acessos o diretório
+# Acessar o diretório
 cd frontend
 
 # Instalar as dependências
@@ -44,6 +45,18 @@ npm install
 
 # Iniciar a aplicação
 npm start
+```
+
+## Instalação do Mobile
+```bash
+# Acessar o diretório
+cd mobile
+
+# Instalar as dependências
+npm install
+
+# Iniciar a aplicação
+npx expo start --web
 ```
 
 ## 🤔 Como contribuir
