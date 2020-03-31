@@ -3,7 +3,7 @@
 </h1>
 
 # Projeto
-Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o mundo a se tornar um lugar melhor de se viver, ele foi gerado na 11º edição do OmniStack com o intuito de ajudar o desenvolvedor a fixar seu conhecimentos em javascript, react e react-native.
+Este projeto tem como objetivo unir ONGs com os heróis que gostam de ajudar o mundo a se tornar um lugar melhor de se viver, ele foi gerado na 11º edição do OmniStack com o intuito de ajudar o desenvolvedor a fixar seus conhecimentos em javascript, react e react-native.
 
 # Tecnologias
 * Javascript
